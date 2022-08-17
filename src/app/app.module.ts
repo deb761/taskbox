@@ -5,7 +5,16 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule,
+       TaskModule,
+        NgxsModule.forRoot([], {
+         developmentMode: !environment.production,
+       }),
+       NgxsReduxDevtoolsPluginModule.forRoot(),
+       NgxsLoggerPluginModule.forRoot({
+         disabled: environment.production,
+       }),
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })
