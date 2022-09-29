@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestDialogComponent } from './test-dialog.component';
 
 @Component({
+    selector: 'app-launcher', // <--- 1. add selector
     template: `
       <button mat-raised-button color="primary" (click)="launch()"> Launch </button>
     `
