@@ -13,8 +13,8 @@ import { TestDialogComponent } from './test-dialog.component';
     `
 })
 class LaunchDialogComponent {
-    @Input() title = '';
-    @Input() description = '';
+    @Input() title = 'Launch Dialog Title';
+    @Input() description = 'Launch Dialog Description';
     @Input() width = '';
     constructor(private _dialog: MatDialog) { }
 
